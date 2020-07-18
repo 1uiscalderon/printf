@@ -1,15 +1,19 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 #include <stdlib.h>
-#include <unistd>
+#include <unistd.h>
 #include <stdarg.h>
+#include <string.h>
+#include <stdio.h>
 
 int _putchar(char c);
-typedef struct op
+typedef struct simbolo
 {
-        char *char; // Character used to print acording to type
-        int (*f)(va_list); // Function taken from the list
-}op_t;
-
+        char *simb; 
+        int (*f)(); 
+}simb;
+int _printf(const char *format, ...);
+int(*take_form(char signo))(va_list);
+int print_char(va_list c);
 
 #endif
