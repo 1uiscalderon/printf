@@ -1,0 +1,9 @@
+.TH _PRINTF 3 "20 JUL 2020" "Vers 1.0" "_PRINTF"
+.SH NAME
+.B _printf
+- formatted output conversion
+.SH SYNOPSIS
+.B #include "holberton.h"
+.LP
+.B int _printf(const char *
+.I format

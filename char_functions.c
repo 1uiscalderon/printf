@@ -12,15 +12,17 @@ int print_string(va_list s)
        char *string;
 
        string = va_arg(s, char *);
-       for (i = 0; s != '\0'; i++)
-       {
-              _putchar(string[i]);
-       }
-       return (i) /* Check */
+     
+              for (i = 0; string[i] && string != NULL; i++)
+              { 
+                     _putchar(string[i]);
+              }
+              return (i);
+      
 }
 
-int print_%(void)
+int print_porc(void)
 {
-     _putchar('%');
-     return (1);  
+       _putchar('%');
+       return (1);
 }

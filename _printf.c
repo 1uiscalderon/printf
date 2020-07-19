@@ -11,7 +11,7 @@ int (*take_form(char signo))(va_list)
 	simb op_list[] = {
 	    {"c", print_char},
 	    {"s", print_string},
-	    {"%", print_% },
+	    {"%", print_porc},
 	    {"d", print_int},
 	    {"i", print_int},
 	    {NULL, NULL}};
@@ -33,6 +33,7 @@ int (*take_form(char signo))(va_list)
 int _printf(const char *format, ...)
 {
 	int i = 0, cont = -1;
+	int (*simb)(va_list);
 
 	va_list list;
 
