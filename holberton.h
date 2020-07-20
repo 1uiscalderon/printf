@@ -23,5 +23,5 @@ int print_char(va_list c);
 int print_string(va_list s);
 int print_porc(void);
 int print_int(va_list n);
-void print_number(int n2);
+void print_number(unsigned int n2);
 #endif
