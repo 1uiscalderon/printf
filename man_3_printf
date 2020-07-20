@@ -7,3 +7,24 @@
 .LP
 .B int _printf(const char *
 .I format
+.B , ...);
+.SH DESCRIPTION
+- The function _printf is a variadic function that prints a string according to 
+.I format.
+.SS RETURN
+_printf returns on success, the number of characters printed.
+.SS Format string
+Format string is composed of zero or more directives: ordinary characters(not%) and conversion specifications is introduced by the character %, "%%" format will print "%".
+.SS Flag characters
+The character "%" is followed by the following flags:
+i, d Both arguments are used for integer arguments. Convert the variable to a decimal number either positive or negative.
+
+.SH EXAMPLES
+
+.SH SEE ALSO
+printf(1), printf(3)
+.SH BUGS
+_printf does not take in count lenght and precision modifiers.
+.SH AUTHORS
+Luis Carvajal and Luis Miguel Calderon
+
