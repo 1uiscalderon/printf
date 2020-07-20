@@ -42,7 +42,10 @@ int _printf(const char *format, ...)
 	int (*simb)(va_list);
 
 	va_list list;
-
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	if (format[i] != '\0')
 	{
 		cont = 0;

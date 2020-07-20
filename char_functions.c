@@ -24,6 +24,10 @@ int print_string(va_list s)
 	char *string;
 
 	string = va_arg(s, char *);
+	if (string == NULL)
+	{
+		string = "(null)";
+	}
 
 	for (i = 0; string[i] && string != NULL; i++)
 	{
