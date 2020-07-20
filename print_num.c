@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <limits.h>
 
 /**
  * print_int - Function used to print integers
@@ -8,13 +9,13 @@
 
 int print_int(va_list n)
 {
+
 	unsigned int num = 0;
-	int i = 0, count = 1;
+	int i = 0;
+	int count = 1;
 
 	num = va_arg(n, int);
-
 	i = num;
-
 	if (i < 0)
 	{
 		_putchar('-');
@@ -35,9 +36,9 @@ int print_int(va_list n)
  * @n2: va_list parameter
  */
 
-void print_number(int n2)
+void print_number(unsigned int n2)
 {
-	int a = n2;
+	unsigned int a = n2;
 
 	if (a / 10)
 	{
