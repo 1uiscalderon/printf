@@ -9,10 +9,20 @@
 .I format
 .B , ...);
 .SH DESCRIPTION
-- The function _printf is a variadic function that prints a string according to 
+- The function _printf is a variadic function that write an output according to 
 .I format.
+.LP
+.RS 4
+%c:             Use to print characters.
+.RS 0
+%s:             Use to print strings.
+.RS 0
+%d, %i:         Use to print arguments converted to signed decimal notation.
+.RS 0
+%               A  '%'  is written.  No argument is converted.  The complete con‐
+                version specification is '%%'.
 .SS RETURN
-_printf returns on success, the number of characters printed.
+_printf returns on success, the number of characters printed  (excluding the null byte used to end output to strings).
 .SS Format string
 Format string is composed of zero or more directives: ordinary characters(not%) and conversion specifications is introduced by the character %, "%%" format will print "%".
 .SS Flag characters
@@ -20,11 +30,27 @@ The character "%" is followed by the following flags:
 i, d Both arguments are used for integer arguments. Convert the variable to a decimal number either positive or negative.
 
 .SH EXAMPLES
+.B To print character 'H' use:
+.RS 3
+_printf("Character:[%c]\\n", 'H');
+.LP
+.RS -3
+.B To and string "Let's try to printf a simple sentence." and put new line 
+"\\n".
+.RS 3
+_printf("Let's try to printf a simple sentence.\\n");
+.LP
+.RS -3
+.B To print a number '120' use:
+.RS 3
+_printf("Negative:[%d]\\n", 120);       or
+.RS 0
+_printf("Negative:[%i]\\n", 120);
 
 .SH SEE ALSO
-printf(1), printf(3)
+.I printf(3)
 .SH BUGS
-_printf does not take in count lenght and precision modifiers.
+_printf does not take in count lenght, handle field width and precision modifiers.
 .SH AUTHORS
 Luis Carvajal and Luis Miguel Calderon
 
