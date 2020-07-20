@@ -1,9 +1,8 @@
 #include "holberton.h"
 
 /**
- * _printf - List the characters or parameters given to be listed
- *           in va_list.
- * @format: All characters to be used acording to user.
+ * take_form - Function for selecting the matching character from the structure.
+ * @signo: All characters to be used acording to user.
  * Return: Characters
  */
 int (*take_form(char signo))(va_list)
@@ -29,6 +28,13 @@ int (*take_form(char signo))(va_list)
 	}
 	return (NULL);
 }
+
+/**
+ * _printf - List the characters or parameters given to be listed
+ *           in va_list.
+ * @format: All characters to be used acording to user.
+ * Return: Number of Characters printed
+ */
 
 int _printf(const char *format, ...)
 {
@@ -73,5 +79,5 @@ int _printf(const char *format, ...)
 		}
 		va_end(list);
 	}
-	return(cont);
+	return (cont);
 }
