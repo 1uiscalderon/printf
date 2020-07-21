@@ -54,23 +54,18 @@ void print_number(unsigned int n2)
 
 int print_binary(va_list n)
 {
-
-	int num = 0;
+	unsigned int num = 0;
 	unsigned int i = 0;
 	int count = 0;
 
 	num = va_arg(n, int);
 	i = num;
-	if (num <= 0)
-	{
-		_putchar('0');
-		return (1);
-	}
 	for (; i > 0; count++)
 	{
 		i = i / 2;
 	}
 	print_number_binary(num);
+
 	return (count);
 }
 /**
@@ -78,7 +73,7 @@ int print_binary(va_list n)
  * @n2: va_list parameter
  */
 
-void print_number_binary(int n2)
+void print_number_binary(unsigned int n2)
 {
 	unsigned int a = n2;
 

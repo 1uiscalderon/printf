@@ -25,5 +25,5 @@ int print_porc(void);
 int print_int(va_list n);
 void print_number(unsigned int n2);
 int print_binary(va_list n);
-void print_number_binary(int n2);
+void print_number_binary(unsigned int n2);
 #endif
