@@ -61,11 +61,16 @@ int print_binary(va_list n)
 
 	num = va_arg(n, int);
 	i = num;
-	if (num < 0)
+	if (num == 0)
 	{
 		_putchar('0');
+	}
+	if (num <= 0)
+	{
 		return (count);
 	}
+	if (num <= 0)
+		return (-1);
 	for (; i > 0; count++)
 	{
 		i = i / 2;
@@ -73,7 +78,6 @@ int print_binary(va_list n)
 	print_number_binary(num);
 	return (count);
 }
-
 /**
  * print_number_binary - Function used to print integers using recursion
  * @n2: va_list parameter
