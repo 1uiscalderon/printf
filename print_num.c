@@ -57,7 +57,7 @@ int print_binary(va_list n)
 
 	int num = 0;
 	unsigned int i = 0;
-	int count = 1;
+	int count = 0;
 
 	num = va_arg(n, int);
 	i = num;
