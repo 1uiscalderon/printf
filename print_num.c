@@ -62,11 +62,7 @@ int print_binary(va_list n)
 	num = va_arg(n, int);
 	i = num;
 	if (num <= 0)
-	{
-		_putchar('0');
-	}
-	if (num <= 0)
-		return (1);
+		return (0);
 	for (; i > 0; count++)
 	{
 		i = i / 2;
