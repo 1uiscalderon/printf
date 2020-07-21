@@ -63,10 +63,8 @@ int print_binary(va_list n)
 	i = num;
 	if (num < 0)
 	{
-		_putchar('1');
-		num = num * -1;
-		i = num;
-		count++;
+		_putchar('0');
+		return (count);
 	}
 	for (; i > 0; count++)
 	{
