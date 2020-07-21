@@ -13,6 +13,7 @@ int (*take_form(char signo))(va_list)
 	    {"%", print_porc},
 	    {"d", print_int},
 	    {"i", print_int},
+	    {"b", print_binary},
 	    {NULL, NULL}};
 	int i = 0;
 
